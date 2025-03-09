@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Autoevaluación del Proyecto: Platillo para una Vida Saludable</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f0f4f8;
+            margin: 0;
+            padding: 20px;
+            color: #333;
+        }
+        h1 {
+            text-align: center;
+            color: #2c3e50;
+            margin-bottom: 20px;
+            font-size: 2.5em;
+        }
+        h2 {
+            text-align: center;
+            color: #34495e;
+            font-size: 1.5em;
+            margin-bottom: 40px;
+        }
+        .form-container {
+            max-width: 800px;
+            margin: 0 auto;
+            background: #ffffff;
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+        .criterio {
+            margin-bottom: 25px;
+        }
+        .criterio label {
+            display: block;
+            font-weight: bold;
+            margin-bottom: 10px;
+            color: #34495e;
+            font-size: 1.1em;
+        }
+        .criterio .descripcion {
+            font-size: 0.9em;
+            color: #7f8c8d;
+            margin-bottom: 10px;
+        }
+        .botones {
+            display: flex;
+            gap: 10px;
+        }
+        .botones button {
+            flex: 1;
+            padding: 12px;
+            border: none;
+            border-radius: 8px;
+            background-color: #ecf0f1;
+            color: #34495e;
+            font-size: 16px;
+            cursor: pointer;
+            transition: background-color 0.3s ease, transform 0.2s ease;
+        }
+        .botones button:hover {
+            background-color: #d5dbdb;
+            transform: scale(1.05);
+        }
+        .botones button.seleccionado {
+            background-color: #3498db;
+            color: white;
+        }
+        .progress-bar {
+            width: 100%;
+            background: #ecf0f1;
+            border-radius: 8px;
+            overflow: hidden;
+            margin-top: 30px;
+            height: 25px;
+        }
+        .progress-bar-fill {
+            height: 100%;
+            background: linear-gradient(90deg, #3498db, #2ecc71);
+            width: 0%;
+            transition: width 0.5s ease;
+        }
+        .resultado {
+            text-align: center;
+            margin-top: 25px;
+            font-size: 1.5em;
+            font-weight: bold;
+            color: #2c3e50;
+        }
+        .resultado span {
+            color: #3498db;
+        }
+        .btn-calcular {
+            display: block;
+            width: 100%;
+            padding: 15px;
+            background: #3498db;
+            color: white;
+            border: none;
+            border-radius: 8px;
+            font-size: 18px;
+            cursor: pointer;
+            margin-top: 30px;
+            transition: background-color 0.3s ease;
+        }
+        .btn-calcular:hover {
+            background: #2980b9;
+        }
+    </style>
+</head>
+<body>
+    <h1>Autoevaluación del Proyecto</h1>
+    <h2>Platillo para una Vida Saludable</h2>
+    <div class="form-container">
+        <form id="evaluacionForm">
+            <!-- Criterios de evaluación -->
+            <div class="criterio">
+                <label>1. Creatividad en el diseño de platillos</label>
+                <div class="descripcion">Evalúa la originalidad y creatividad en la propuesta de platillos saludables.</div>
+                <div class="botones">
+                    <button type="button" data-value="1">Regular</button>
+                    <button type="button" data-value="2">Bueno</button>
+                    <button type="button" data-value="3">Excelente</button>
+                </div>
+            </div>
+            <div class="criterio">
+                <label>2. Investigación sobre alimentación saludable</label>
+                <div class="descripcion">Valora la profundidad y precisión de la investigación sobre nutrición y alimentos saludables.</div>
+                <div class="botones">
+                    <button type="button" data-value="1">Regular</button>
+                    <button type="button" data-value="2">Bueno</button>
+                    <button type="button" data-value="3">Excelente</button>
+                </div>
+            </div>
+            <div class="criterio">
+                <label>3. Uso de ingredientes saludables y accesibles</label>
+                <div class="descripcion">Evalúa si los platillos utilizan ingredientes nutritivos y económicos.</div>
+                <div class="botones">
+                    <button type="button" data-value="1">Regular</button>
+                    <button type="button" data-value="2">Bueno</button>
+                    <button type="button" data-value="3">Excelente</button>
+                </div>
+            </div>
+            <div class="criterio">
+                <label>4. Presentación del compendio de platillos</label>
+                <div class="descripcion">Valora la organización y atractivo visual del compendio de platillos.</div>
+                <div class="botones">
+                    <button type="button" data-value="1">Regular</button>
+                    <button type="button" data-value="2">Bueno</button>
+                    <button type="button" data-value="3">Excelente</button>
+                </div>
+            </div>
+            <div class="criterio">
+                <label>5. Aplicación de conocimientos sobre nutrición</label>
+                <div class="descripcion">Evalúa si los platillos reflejan un equilibrio nutricional adecuado.</div>
+                <div class="botones">
+                    <button type="button" data-value="1">Regular</button>
+                    <button type="button" data-value="2">Bueno</button>
+                    <button type="button" data-value="3">Excelente</button>
+                </div>
+            </div>
+            <div class="criterio">
+                <label>6. Impacto en la comunidad</label>
+                <div class="descripcion">Valora cómo el proyecto promueve hábitos alimenticios saludables en la comunidad.</div>
+                <div class="botones">
+                    <button type="button" data-value="1">Regular</button>
+                    <button type="button" data-value="2">Bueno</button>
+                    <button type="button" data-value="3">Excelente</button>
+                </div>
+            </div>
+            <div class="criterio">
+                <label>7. Participación y colaboración del equipo</label>
+                <div class="descripcion">Evalúa el nivel de participación y colaboración entre los miembros del equipo.</div>
+                <div class="botones">
+                    <button type="button" data-value="1">Regular</button>
+                    <button type="button" data-value="2">Bueno</button>
+                    <button type="button" data-value="3">Excelente</button>
+                </div>
+            </div>
+            <div class="criterio">
+                <label>8. Presentación y exposición del proyecto</label>
+                <div class="descripcion">Valora cómo se presenta el proyecto a la comunidad.</div>
+                <div class="botones">
+                    <button type="button" data-value="1">Regular</button>
+                    <button type="button" data-value="2">Bueno</button>
+                    <button type="button" data-value="3">Excelente</button>
+                </div>
+            </div>
+            <div class="criterio">
+                <label>9. Aprendizaje personal y reflexión</label>
+                <div class="descripcion">Evalúa tu aprendizaje personal, reflexión y crecimiento durante el desarrollo del proyecto.</div>
+                <div class="botones">
+                    <button type="button" data-value="1">Regular</button>
+                    <button type="button" data-value="2">Bueno</button>
+                    <button type="button" data-value="3">Excelente</button>
+                </div>
+            </div>
+            <div class="criterio">
+                <label>10. Cumplimiento de plazos y organización del proyecto</label>
+                <div class="descripcion">Valora la capacidad del equipo para cumplir con los plazos establecidos y organizar eficientemente las etapas del proyecto.</div>
+                <div class="botones">
+                    <button type="button" data-value="1">Regular</button>
+                    <button type="button" data-value="2">Bueno</button>
+                    <button type="button" data-value="3">Excelente</button>
+                </div>
+            </div>
+
+            <!-- Botón para calcular -->
+            <button type="button" class="btn-calcular" onclick="calcularCalificacion()">Calcular Calificación</button>
+
+            <!-- Barra de progreso y resultado -->
+            <div class="progress-bar">
+                <div class="progress-bar-fill" id="progressBar"></div>
+            </div>
+            <div class="resultado">
+                <p>Calificación: <span id="calificacionLetra"></span> (<span id="calificacionNumero"></span>/10)</p>
+            </div>
+        </form>
+    </div>
+
+    <script>
+        // Función para manejar la selección de botones
+        const botones = document.querySelectorAll(".botones button");
+        botones.forEach(boton => {
+            boton.addEventListener("click", () => {
+                // Remover la clase "seleccionado" de todos los botones del mismo grupo
+                boton.parentElement.querySelectorAll("button").forEach(b => b.classList.remove("seleccionado"));
+                // Agregar la clase "seleccionado" al botón clickeado
+                boton.classList.add("seleccionado");
+            });
+        });
+
+        function calcularCalificacion() {
+            const criterios = document.querySelectorAll(".botones .seleccionado");
+            if (criterios.length < 10) {
+                alert("Por favor, selecciona una opción para todos los criterios.");
+                return;
+            }
+
+            const valores = Array.from(criterios).map(boton => parseInt(boton.getAttribute("data-value")));
+            const total = valores.reduce((sum, value) => sum + value, 0);
+            const promedio = (total / 10).toFixed(1);
+
+            // Convertir a calificación en letra y número
+            let calificacionLetra, calificacionNumero;
+            if (promedio >= 2.7) {
+                calificacionLetra = "S";
+                calificacionNumero = 10;
+            } else if (promedio >= 2.4) {
+                calificacionLetra = "A";
+                calificacionNumero = 9;
+            } else if (promedio >= 2.1) {
+                calificacionLetra = "B";
+                calificacionNumero = 8;
+            } else if (promedio >= 1.8) {
+                calificacionLetra = "C";
+                calificacionNumero = 7;
+            } else if (promedio >= 1.5) {
+                calificacionLetra = "D";
+                calificacionNumero = 6;
+            } else {
+                calificacionLetra = "F";
+                calificacionNumero = 5;
+            }
+
+            // Mostrar resultados
+            document.getElementById("calificacionLetra").textContent = calificacionLetra;
+            document.getElementById("calificacionNumero").textContent = calificacionNumero;
+            document.getElementById("progressBar").style.width = `${(calificacionNumero / 10) * 100}%`;
+        }
+    </script>
+</body>
+</html>
