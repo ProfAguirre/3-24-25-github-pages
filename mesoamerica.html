@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cuestionario sobre Mesoamérica - Apocalypto</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(135deg, #a8c0ff, #3f2b96); /* Degradado de azules suaves */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            color: #333;
+        }
+        .container {
+            background-color: rgba(255, 255, 255, 0.9);
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+            width: 100%;
+            max-width: 700px;
+            position: relative;
+            overflow: hidden;
+        }
+        .container::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('https://i.imgur.com/3QZQZQz.jpg') no-repeat center center/cover;
+            opacity: 0.1;
+            z-index: -1;
+        }
+        h1 {
+            text-align: center;
+            color: #2c3e50;
+            font-size: 32px;
+            margin-bottom: 20px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        .question {
+            margin-bottom: 20px;
+            padding: 15px;
+            border-radius: 10px;
+            transition: background 0.3s ease;
+        }
+        .question.correct {
+            background: linear-gradient(135deg, #d4edda, #c3e6cb); /* Degradado verde para respuestas correctas */
+        }
+        .question.incorrect {
+            background: linear-gradient(135deg, #f8d7da, #f5c6cb); /* Degradado rojo para respuestas incorrectas */
+        }
+        .question label {
+            font-size: 18px;
+            display: block;
+            margin-bottom: 10px;
+            color: #2c3e50;
+            font-weight: bold;
+        }
+        .options input {
+            margin-right: 10px;
+        }
+        .options label {
+            font-size: 16px;
+            display: block;
+            padding: 10px;
+            border-radius: 5px;
+            margin-bottom: 5px;
+            background-color: rgba(255, 255, 255, 0.8);
+            transition: background-color 0.3s ease;
+        }
+        .options label:hover {
+            background-color: rgba(200, 200, 200, 0.8);
+        }
+        .submit-btn {
+            display: block;
+            width: 100%;
+            padding: 15px;
+            background: linear-gradient(135deg, #2c3e50, #34495e);
+            color: white;
+            border: none;
+            border-radius: 5px;
+            font-size: 18px;
+            cursor: pointer;
+            transition: background 0.3s ease;
+        }
+        .submit-btn:hover {
+            background: linear-gradient(135deg, #34495e, #2c3e50);
+        }
+        .result {
+            text-align: center;
+            margin-top: 20px;
+            font-size: 20px;
+            color: #2c3e50;
+            font-weight: bold;
+        }
+        .feedback {
+            margin-top: 10px;
+            font-size: 18px;
+            font-weight: bold;
+            color: #2c3e50;
+        }
+        .attempts {
+            margin-top: 10px;
+            font-size: 16px;
+            color: #2c3e50;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h1>Cuestionario sobre la Sociedad Mesoamericana (Apocalypto)</h1>
+    <form id="quizForm">
+        <!-- Pregunta 1 -->
+        <div class="question" id="q1-container">
+            <label>1. ¿Cómo se organizaba la sociedad en la civilización mostrada en *Apocalypto*?</label>
+            <div class="options">
+                <input type="radio" id="q1a" name="q1" value="a">
+                <label for="q1a">En un sistema democrático, con elecciones libres.</label><br>
+                <input type="radio" id="q1b" name="q1" value="b">
+                <label for="q1b">En una jerarquía con un líder supremo y una clase trabajadora.</label><br>
+                <input type="radio" id="q1c" name="q1" value="c">
+                <label for="q1c">Una sociedad igualitaria sin distinción de clases.</label><br>
+            </div>
+        </div>
+
+        <!-- Pregunta 2 -->
+        <div class="question" id="q2-container">
+            <label>2. En *Apocalypto*, ¿qué función principal tenía la arquitectura de las pirámides y templos?</label>
+            <div class="options">
+                <input type="radio" id="q2a" name="q2" value="a">
+                <label for="q2a">Era utilizada como centros de comercio.</label><br>
+                <input type="radio" id="q2b" name="q2" value="b">
+                <label for="q2b">Tenía fines religiosos y ceremoniales, como los sacrificios humanos.</label><br>
+                <input type="radio" id="q2c" name="q2" value="c">
+                <label for="q2c">Era una estructura de defensa ante ataques enemigos.</label><br>
+            </div>
+        </div>
+
+        <!-- Pregunta 3 -->
+        <div class="question" id="q3-container">
+            <label>3. ¿Qué impacto tuvieron las enfermedades traídas por los conquistadores en las poblaciones indígenas?</label>
+            <div class="options">
+                <input type="radio" id="q3a" name="q3" value="a">
+                <label for="q3a">No tuvieron ningún impacto significativo en las sociedades mesoamericanas.</label><br>
+                <input type="radio" id="q3b" name="q3" value="b">
+                <label for="q3b">Causaron una gran disminución de la población y alteraron la estructura social.</label><br>
+                <input type="radio" id="q3c" name="q3" value="c">
+                <label for="q3c">Solo afectaron a las clases altas y no a las clases bajas.</label><br>
+            </div>
+        </div>
+
+        <!-- Pregunta 4 -->
+        <div class="question" id="q4-container">
+            <label>4. ¿Qué papel jugaban los sacrificios humanos en la cultura mesoamericana mostrada en la película?</label>
+            <div class="options">
+                <input type="radio" id="q4a" name="q4" value="a">
+                <label for="q4a">Eran una forma de entretenimiento para la élite.</label><br>
+                <input type="radio" id="q4b" name="q4" value="b">
+                <label for="q4b">Eran una práctica religiosa para honrar a los dioses y asegurar el ciclo de la vida.</label><br>
+                <input type="radio" id="q4c" name="q4" value="c">
+                <label for="q4c">No eran comunes y solo ocurrían en grandes eventos políticos.</label><br>
+            </div>
+        </div>
+
+        <!-- Pregunta 5 -->
+        <div class="question" id="q5-container">
+            <label>5. En *Apocalypto*, ¿cómo se representa el uso de los conocimientos astronómicos de los mayas?</label>
+            <div class="options">
+                <input type="radio" id="q5a" name="q5" value="a">
+                <label for="q5a">Los mayas usaban la astronomía solo para predecir el clima.</label><br>
+                <input type="radio" id="q5b" name="q5" value="b">
+                <label for="q5b">La observación de los cielos era central para su calendario y ceremonias religiosas.</label><br>
+                <input type="radio" id="q5c" name="q5" value="c">
+                <label for="q5c">La astronomía era una disciplina poco importante y se usaba únicamente para la agricultura.</label><br>
+            </div>
+        </div>
+
+        <!-- Pregunta 6 -->
+        <div class="question" id="q6-container">
+            <label>6. ¿Qué representaba la figura del "Jaguar" en la cultura mesoamericana mostrada en la película?</label>
+            <div class="options">
+                <input type="radio" id="q6a" name="q6" value="a">
+                <label for="q6a">Era un símbolo de poder y valentía en la guerra.</label><br>
+                <input type="radio" id="q6b" name="q6" value="b">
+                <label for="q6b">Representaba la conexión con los dioses del inframundo.</label><br>
+                <input type="radio" id="q6c" name="q6" value="c">
+                <label for="q6c">Era un símbolo de la prosperidad agrícola.</label><br>
+            </div>
+        </div>
+
+        <!-- Pregunta 7 -->
+        <div class="question" id="q7-container">
+            <label>7. ¿Qué factor clave provocó la caída de la civilización mostrada en la película?</label>
+            <div class="options">
+                <input type="radio" id="q7a" name="q7" value="a">
+                <label for="q7a">La invasión de pueblos extranjeros.</label><br>
+                <input type="radio" id="q7b" name="q7" value="b">
+                <label for="q7b">El agotamiento de recursos naturales y el colapso ambiental.</label><br>
+                <input type="radio" id="q7c" name="q7" value="c">
+                <label for="q7c">La falta de conocimiento astronómico para predecir catástrofes.</label><br>
+            </div>
+        </div>
+
+        <!-- Pregunta 8 -->
+        <div class="question" id="q8-container">
+            <label>8. ¿Cómo se muestra la relación entre los pueblos indígenas y los esclavos en *Apocalypto*?</label>
+            <div class="options">
+                <input type="radio" id="q8a" name="q8" value="a">
+                <label for="q8a">Los esclavos eran vistos como una clase baja, sin ningún valor religioso.</label><br>
+                <input type="radio" id="q8b" name="q8" value="b">
+                <label for="q8b">La relación entre ellos era estricta, pero se basaba en la comunidad y respeto mutuo.</label><br>
+                <input type="radio" id="q8c" name="q8" value="c">
+                <label for="q8c">Los esclavos eran utilizados principalmente en la construcción de pirámides y sacrificios.</label><br>
+            </div>
+        </div>
+
+        <!-- Pregunta 9 -->
+        <div class="question" id="q9-container">
+            <label>9. ¿Cómo influyó la violencia en la vida cotidiana de los personajes de *Apocalypto*?</label>
+            <div class="options">
+                <input type="radio" id="q9a" name="q9" value="a">
+                <label for="q9a">La violencia era rara y ocurría solo en las ceremonias religiosas.</label><br>
+                <input type="radio" id="q9b" name="q9" value="b">
+                <label for="q9b">La violencia era una constante en la vida de los personajes, tanto en la guerra como en la religión.</label><br>
+                <input type="radio" id="q9c" name="q9" value="c">
+                <label for="q9c">La violencia estaba completamente ausente en la vida de los pueblos indígenas.</label><br>
+            </div>
+        </div>
+
+        <!-- Pregunta 10 -->
+        <div class="question" id="q10-container">
+            <label>10. ¿Qué simboliza la escena final en la que los personajes escapan de los conquistadores?</label>
+            <div class="options">
+                <input type="radio" id="q10a" name="q10" value="a">
+                <label for="q10a">Es un símbolo de la lucha por la libertad y la resistencia a la opresión.</label><br>
+                <input type="radio" id="q10b" name="q10" value="b">
+                <label for="q10b">Muestra la aceptación de la derrota y el fin de una civilización.</label><br>
+                <input type="radio" id="q10c" name="q10" value="c">
+                <label for="q10c">Es una metáfora de la unión de los pueblos indígenas con los conquistadores.</label><br>
+            </div>
+        </div>
+
+        <button type="button" class="submit-btn" onclick="checkAnswers()">Evaluar respuestas</button>
+    </form>
+
+    <div id="result" class="result"></div>
+    <div id="feedback" class="feedback"></div>
+    <div id="attempts" class="attempts"></div> <!-- Nuevo div para mostrar los intentos -->
+</div>
+
+<script>
+    let attempts = 0; // Contador de intentos
+
+    function checkAnswers() {
+        attempts++; // Incrementar el contador de intentos
+        document.getElementById("attempts").innerHTML = `Intentos: ${attempts}`; // Mostrar intentos
+
+        var correctAnswers = {
+            q1: 'b',
+            q2: 'b',
+            q3: 'b',
+            q4: 'b',
+            q5: 'b',
+            q6: 'a',
+            q7: 'b',
+            q8: 'c',
+            q9: 'b',
+            q10: 'a'
+        };
+
+        var form = document.getElementById("quizForm");
+        var result = document.getElementById("result");
+        var feedback = document.getElementById("feedback");
+        var score = 0;
+
+        // Evaluamos las respuestas
+        for (var i = 1; i <= 10; i++) {
+            var selectedOption = form.querySelector('input[name="q' + i + '"]:checked');
+            var questionContainer = document.getElementById("q" + i + "-container");
+
+            // Si hay una opción seleccionada, verificarla
+            if (selectedOption) {
+                if (selectedOption.value === correctAnswers["q" + i]) {
+                    score++;
+                    questionContainer.classList.add("correct"); // Marcar pregunta como correcta
+                } else {
+                    questionContainer.classList.add("incorrect"); // Marcar pregunta como incorrecta
+                }
+            } else {
+                questionContainer.classList.add("incorrect"); // Marcar pregunta como incorrecta si no se seleccionó ninguna opción
+            }
+        }
+
+        // Mostrar la puntuación
+        result.innerHTML = "Tu puntuación es: " + score + " de 10.";
+
+        // Mensaje de refuerzo según la puntuación
+        var message = "";
+        if (score === 10) {
+            message = "¡Excelente! Dominas el tema de las culturas mesoamericanas.";
+        } else if (score >= 7) {
+            message = "¡Muy bien! Tienes un buen conocimiento, pero puedes repasar algunos detalles.";
+        } else if (score >= 5) {
+            message = "No está mal, pero es recomendable repasar el tema para mejorar.";
+        } else {
+            message = "Es buena idea revisar el material y volver a intentarlo. ¡Tú puedes!";
+        }
+        feedback.innerHTML = message; // Mostrar el mensaje de refuerzo
+    }
+</script>
+
+</body>
+</html>
