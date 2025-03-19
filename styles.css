@@ -1,0 +1,122 @@
+/* Estilos generales */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 20px;
+}
+h2 {
+    color: #333;
+    text-align: center;
+}
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    background-color: #fff;
+}
+th, td {
+    border: 1px solid #ddd;
+    padding: 12px;
+    text-align: center;
+}
+th {
+    background-color: #4CAF50;
+    color: white;
+    font-weight: bold;
+}
+tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+tr:hover {
+    background-color: #f1f1f1;
+}
+
+/* Estilos para los botones de niveles */
+.nivel-boton {
+    padding: 8px 12px;
+    margin: 4px;
+    cursor: pointer;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+    transition: background-color 0.3s, color 0.3s;
+}
+.nivel-boton.seleccionado.regular {
+    background-color: #ff4d4d; /* Rojo para Regular */
+    color: white;
+}
+.nivel-boton.seleccionado.bueno {
+    background-color: #ffeb3b; /* Amarillo para Bueno */
+    color: black;
+}
+.nivel-boton.seleccionado.excelente {
+    background-color: #4CAF50; /* Verde para Excelente */
+    color: white;
+}
+
+/* Estilos para la calificación */
+.calificacion {
+    font-weight: bold;
+    font-size: 1.1em;
+}
+.calificacion.regular {
+    color: #ff4d4d; /* Rojo para Regular */
+}
+.calificacion.bueno {
+    color: #ffeb3b; /* Amarillo para Bueno */
+}
+.calificacion.excelente {
+    color: #4CAF50; /* Verde para Excelente */
+}
+
+/* Estilos para el switch */
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 60px;
+    height: 34px;
+}
+.switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    transition: 0.4s;
+    border-radius: 34px;
+}
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 26px;
+    width: 26px;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    transition: 0.4s;
+    border-radius: 50%;
+}
+input:checked + .slider {
+    background-color: #4CAF50;
+}
+input:checked + .slider:before {
+    transform: translateX(26px);
+}
+
+/* Estilos para el promedio de la materia */
+.promedio-materia {
+    background-color: #e0f7fa; /* Fondo azul claro para destacar */
+    font-weight: bold;
+}
+.promedio-materia td {
+    font-size: 1.2em;
+}
