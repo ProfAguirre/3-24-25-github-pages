@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Examen de Inglés Nivel A1</title>
+    <style>
+        /* Estilos generales */
+        body {
+            font-family: 'Arial', sans-serif;
+            background: linear-gradient(135deg, #6a11cb, #2575fc);
+            color: #333;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+
+        h1 {
+            text-align: center;
+            color: #fff;
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+        }
+
+        form {
+            background: rgba(255, 255, 255, 0.9);
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+            width: 100%;
+            max-width: 800px;
+        }
+
+        .question {
+            margin-bottom: 25px;
+            padding: 15px;
+            background: #f9f9f9;
+            border-radius: 10px;
+            border: 1px solid #ddd;
+        }
+
+        .question p {
+            font-weight: bold;
+            margin-bottom: 10px;
+            color: #444;
+        }
+
+        .options label {
+            display: block;
+            margin: 8px 0;
+            padding: 10px;
+            background: #fff;
+            border-radius: 5px;
+            border: 1px solid #ddd;
+            cursor: pointer;
+            transition: background 0.3s ease;
+        }
+
+        .options label:hover {
+            background: #f1f1f1;
+        }
+
+        .options input[type="radio"] {
+            margin-right: 10px;
+        }
+
+        .submit-button {
+            text-align: center;
+            margin-top: 30px;
+        }
+
+        .submit-button button {
+            padding: 12px 25px;
+            font-size: 16px;
+            background: linear-gradient(135deg, #6a11cb, #2575fc);
+            color: white;
+            border: none;
+            border-radius: 25px;
+            cursor: pointer;
+            transition: background 0.3s ease;
+        }
+
+        .submit-button button:hover {
+            background: linear-gradient(135deg, #2575fc, #6a11cb);
+        }
+
+        /* Estilos para el mensaje de calificación */
+        .result-message {
+            margin-top: 20px;
+            padding: 20px;
+            border-radius: 10px;
+            text-align: center;
+            font-size: 1.2rem;
+            display: none;
+        }
+
+        .result-message.good {
+            background: #d4edda;
+            color: #155724;
+            border: 1px solid #c3e6cb;
+        }
+
+        .result-message.average {
+            background: #fff3cd;
+            color: #856404;
+            border: 1px solid #ffeeba;
+        }
+
+        .result-message.poor {
+            background: #f8d7da;
+            color: #721c24;
+            border: 1px solid #f5c6cb;
+        }
+    </style>
+</head>
+<body>
+
+<h1>Examen de Inglés Nivel A1</h1>
+<form id="englishExam">
+    <!-- Pregunta 1 -->
+    <div class="question">
+        <p>1. What is your name?</p>
+        <div class="options">
+            <label><input type="radio" name="q1" value="a"> a) My name is Maria.</label>
+            <label><input type="radio" name="q1" value="b"> b) I am 10 years old.</label>
+            <label><input type="radio" name="q1" value="c"> c) I live in Madrid.</label>
+        </div>
+    </div>
+
+    <!-- Pregunta 2 -->
+    <div class="question">
+        <p>2. Where do you live?</p>
+        <div class="options">
+            <label><input type="radio" name="q2" value="a"> a) I am fine.</label>
+            <label><input type="radio" name="q2" value="b"> b) I live in London.</label>
+            <label><input type="radio" name="q2" value="c"> c) I am 12 years old.</label>
+        </div>
+    </div>
+
+    <!-- Pregunta 3 -->
+    <div class="question">
+        <p>3. When is your birthday?</p>
+        <div class="options">
+            <label><input type="radio" name="q3" value="a"> a) It's on July 5th.</label>
+            <label><input type="radio" name="q3" value="b"> b) I like cake.</label>
+            <label><input type="radio" name="q3" value="c"> c) I am happy.</label>
+        </div>
+    </div>
+
+    <!-- Pregunta 4 -->
+    <div class="question">
+        <p>4. Who is your best friend?</p>
+        <div class="options">
+            <label><input type="radio" name="q4" value="a"> a) My best friend is Ana.</label>
+            <label><input type="radio" name="q4" value="b"> b) I like pizza.</label>
+            <label><input type="radio" name="q4" value="c"> c) I am 8 years old.</label>
+        </div>
+    </div>
+
+    <!-- Pregunta 5 -->
+    <div class="question">
+        <p>5. Why do you study English?</p>
+        <div class="options">
+            <label><input type="radio" name="q5" value="a"> a) Because I like it.</label>
+            <label><input type="radio" name="q5" value="b"> b) I am a student.</label>
+            <label><input type="radio" name="q5" value="c"> c) I play soccer.</label>
+        </div>
+    </div>
+
+    <!-- Pregunta 6 -->
+    <div class="question">
+        <p>6. How old are you?</p>
+        <div class="options">
+            <label><input type="radio" name="q6" value="a"> a) I am 9 years old.</label>
+            <label><input type="radio" name="q6" value="b"> b) I live in Paris.</label>
+            <label><input type="radio" name="q6" value="c"> c) My name is Carlos.</label>
+        </div>
+    </div>
+
+    <!-- Pregunta 7 -->
+    <div class="question">
+        <p>7. What is your favorite color?</p>
+        <div class="options">
+            <label><input type="radio" name="q7" value="a"> a) My favorite color is blue.</label>
+            <label><input type="radio" name="q7" value="b"> b) I like apples.</label>
+            <label><input type="radio" name="q7" value="c"> c) I am 7 years old.</label>
+        </div>
+    </div>
+
+    <!-- Pregunta 8 -->
+    <div class="question">
+        <p>8. Where is the school?</p>
+        <div class="options">
+            <label><input type="radio" name="q8" value="a"> a) The school is on Main Street.</label>
+            <label><input type="radio" name="q8" value="b"> b) I am a student.</label>
+            <label><input type="radio" name="q8" value="c"> c) I like to read.</label>
+        </div>
+    </div>
+
+    <!-- Pregunta 9 -->
+    <div class="question">
+        <p>9. When do you go to bed?</p>
+        <div class="options">
+            <label><input type="radio" name="q9" value="a"> a) I go to bed at 9 PM.</label>
+            <label><input type="radio" name="q9" value="b"> b) I like to sleep.</label>
+            <label><input type="radio" name="q9" value="c"> c) I am tired.</label>
+        </div>
+    </div>
+
+    <!-- Pregunta 10 -->
+    <div class="question">
+        <p>10. Who is your teacher?</p>
+        <div class="options">
+            <label><input type="radio" name="q10" value="a"> a) My teacher is Mr. Smith.</label>
+            <label><input type="radio" name="q10" value="b"> b) I like my school.</label>
+            <label><input type="radio" name="q10" value="c"> c) I am a student.</label>
+        </div>
+    </div>
+
+    <!-- Pregunta 11 -->
+    <div class="question">
+        <p>11. Why do you like pizza?</p>
+        <div class="options">
+            <label><input type="radio" name="q11" value="a"> a) Because it is delicious.</label>
+            <label><input type="radio" name="q11" value="b"> b) I am hungry.</label>
+            <label><input type="radio" name="q11" value="c"> c) I like to eat.</label>
+        </div>
+    </div>
+
+    <!-- Pregunta 12 -->
+    <div class="question">
+        <p>12. How do you go to school?</p>
+        <div class="options">
+            <label><input type="radio" name="q12" value="a"> a) I go to school by bus.</label>
+            <label><input type="radio" name="q12" value="b"> b) I like my school.</label>
+            <label><input type="radio" name="q12" value="c"> c) I am a student.</label>
+        </div>
+    </div>
+
+    <!-- Pregunta 13 -->
+    <div class="question">
+        <p>13. What is your favorite animal?</p>
+        <div class="options">
+            <label><input type="radio" name="q13" value="a"> a) My favorite animal is a dog.</label>
+            <label><input type="radio" name="q13" value="b"> b) I like to play.</label>
+            <label><input type="radio" name="q13" value="c"> c) I am happy.</label>
+        </div>
+    </div>
+
+    <!-- Pregunta 14 -->
+    <div class="question">
+        <p>14. Where do you play soccer?</p>
+        <div class="options">
+            <label><input type="radio" name="q14" value="a"> a) I play soccer at the park.</label>
+            <label><input type="radio" name="q14" value="b"> b) I like soccer.</label>
+            <label><input type="radio" name="q14" value="c"> c) I am a student.</label>
+        </div>
+    </div>
+
+    <!-- Pregunta 15 -->
+    <div class="question">
+        <p>15. When do you eat breakfast?</p>
+        <div class="options">
+            <label><input type="radio" name="q15" value="a"> a) I eat breakfast at 7 AM.</label>
+            <label><input type="radio" name="q15" value="b"> b) I like breakfast.</label>
+            <label><input type="radio" name="q15" value="c"> c) I am hungry.</label>
+        </div>
+    </div>
+
+    <!-- Pregunta 16 -->
+    <div class="question">
+        <p>16. Who is your favorite singer?</p>
+        <div class="options">
+            <label><input type="radio" name="q16" value="a"> a) My favorite singer is Taylor Swift.</label>
+            <label><input type="radio" name="q16" value="b"> b) I like music.</label>
+            <label><input type="radio" name="q16" value="c"> c) I am happy.</label>
+        </div>
+    </div>
+
+    <!-- Pregunta 17 -->
+    <div class="question">
+        <p>17. Why do you like summer?</p>
+        <div class="options">
+            <label><input type="radio" name="q17" value="a"> a) Because it is hot and sunny.</label>
+            <label><input type="radio" name="q17" value="b"> b) I like winter.</label>
+            <label><input type="radio" name="q17" value="c"> c) I am cold.</label>
+        </div>
+    </div>
+
+    <!-- Pregunta 18 -->
+    <div class="question">
+        <p>18. How do you spell your name?</p>
+        <div class="options">
+            <label><input type="radio" name="q18" value="a"> a) M-A-R-I-A.</label>
+            <label><input type="radio" name="q18" value="b"> b) I like my name.</label>
+            <label><input type="radio" name="q18" value="c"> c) I am happy.</label>
+        </div>
+    </div>
+
+    <!-- Pregunta 19 -->
+    <div class="question">
+        <p>19. What is your favorite food?</p>
+        <div class="options">
+            <label><input type="radio" name="q19" value="a"> a) My favorite food is pizza.</label>
+            <label><input type="radio" name="q19" value="b"> b) I like to eat.</label>
+            <label><input type="radio" name="q19" value="c"> c) I am hungry.</label>
+        </div>
+    </div>
+
+    <!-- Pregunta 20 -->
+    <div class="question">
+        <p>20. Where is your house?</p>
+        <div class="options">
+            <label><input type="radio" name="q20" value="a"> a) My house is on Maple Street.</label>
+            <label><input type="radio" name="q20" value="b"> b) I like my house.</label>
+            <label><input type="radio" name="q20" value="c"> c) I am at home.</label>
+        </div>
+    </div>
+
+    <!-- Botón de enviar -->
+    <div class="submit-button">
+        <button type="button" onclick="calcularResultado()">Enviar Examen</button>
+    </div>
+
+    <!-- Mensaje de calificación -->
+    <div id="resultMessage" class="result-message"></div>
+</form>
+
+<!-- Script para calcular el resultado -->
+<script>
+    function calcularResultado() {
+        const respuestasCorrectas = [
+            "a", "b", "a", "a", "a", "a", "a", "a", "a", "a",
+            "a", "a", "a", "a", "a", "a", "a", "a", "a", "a"
+        ];
+        let puntaje = 0;
+
+        for (let i = 1; i <= 20; i++) {
+            const respuestaSeleccionada = document.querySelector(`input[name="q${i}"]:checked`);
+            if (respuestaSeleccionada && respuestaSeleccionada.value === respuestasCorrectas[i - 1]) {
+                puntaje++;
+            }
+        }
+
+        // Calcular la nota en escala de 5 a 10
+        const nota = (puntaje / 20) * 5 + 5;
+        const resultMessage = document.getElementById("resultMessage");
+
+        // Mostrar mensaje de refuerzo
+        if (nota >= 9) {
+            resultMessage.className = "result-message good";
+            resultMessage.innerHTML = `¡Excelente! Tu puntaje es: ${puntaje}/20. Tu nota es: ${nota.toFixed(1)}. ¡Sigue así!`;
+        } else if (nota >= 7) {
+            resultMessage.className = "result-message average";
+            resultMessage.innerHTML = `Buen trabajo. Tu puntaje es: ${puntaje}/20. Tu nota es: ${nota.toFixed(1)}. ¡Sigue practicando!`;
+        } else {
+            resultMessage.className = "result-message poor";
+            resultMessage.innerHTML = `Tu puntaje es: ${puntaje}/20. Tu nota es: ${nota.toFixed(1)}. ¡No te rindas, sigue intentándolo!`;
+        }
+
+        resultMessage.style.display = "block";
+    }
+</script>
+
+</body>
+</html>
