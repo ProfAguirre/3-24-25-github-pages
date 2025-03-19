@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Evaluación de Proyectos STEM</title>
+    <!-- Enlace al archivo CSS externo -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<h2>Evaluación de Proyectos STEM</h2>
+
+<form id="evaluacionForm">
+    <table>
+        <thead>
+            <tr>
+                <th>Proyectos</th>
+                <th>¿Se realizó?</th> <!-- Nueva columna -->
+                <th>Creatividad en la solución</th>
+                <th>Investigación</th>
+                <th>Planificación</th>
+                <th>Funcionalidad</th>
+                <th>Resolución de Problema</th>
+                <th>Trabajo en Equipo</th>
+                <th>Presentación</th>
+                <th>Conocimiento Científico</th>
+                <th>Documentación</th>
+                <th>Conclusión</th>
+                <th>Calificación Final</th>
+            </tr>
+        </thead>
+        <tbody>
+            <!-- Proyecto 1: Estructura Tridilosa -->
+            <tr>
+                <td>Estructura Tridilosa</td>
+                <td>
+                    <label class="switch">
+                        <input type="checkbox" checked onchange="calcularCalificaciones()">
+                        <span class="slider"></span>
+                    </label>
+                </td>
+                <td>
+                    <div class="nivel-boton regular" data-value="6" onclick="seleccionarNivel(this)">Regular</div>
+                    <div class="nivel-boton bueno" data-value="8" onclick="seleccionarNivel(this)">Bueno</div>
+                    <div class="nivel-boton excelente" data-value="10" onclick="seleccionarNivel(this)">Excelente</div>
+                </td>
+                <td>
+                    <div class="nivel-boton regular" data-value="6" onclick="seleccionarNivel(this)">Regular</div>
+                    <div class="nivel-boton bueno" data-value="8" onclick="seleccionarNivel(this)">Bueno</div>
+                    <div class="nivel-boton excelente" data-value="10" onclick="seleccionarNivel(this)">Excelente</div>
+                </td>
+                <td>
+                    <div class="nivel-boton regular" data-value="6" onclick="seleccionarNivel(this)">Regular</div>
+                    <div class="nivel-boton bueno" data-value="8" onclick="seleccionarNivel(this)">Bueno</div>
+                    <div class="nivel-boton excelente" data-value="10" onclick="seleccionarNivel(this)">Excelente</div>
+                </td>
+                <td>
+                    <div class="nivel-boton regular" data-value="6" onclick="seleccionarNivel(this)">Regular</div>
+                    <div class="nivel-boton bueno" data-value="8" onclick="seleccionarNivel(this)">Bueno</div>
+                    <div class="nivel-boton excelente" data-value="10" onclick="seleccionarNivel(this)">Excelente</div>
+                </td>
+                <td>
+                    <div class="nivel-boton regular" data-value="6" onclick="seleccionarNivel(this)">Regular</div>
+                    <div class="nivel-boton bueno" data-value="8" onclick="seleccionarNivel(this)">Bueno</div>
+                    <div class="nivel-boton excelente" data-value="10" onclick="seleccionarNivel(this)">Excelente</div>
+                </td>
+                <td>
+                    <div class="nivel-boton regular" data-value="6" onclick="seleccionarNivel(this)">Regular</div>
+                    <div class="nivel-boton bueno" data-value="8" onclick="seleccionarNivel(this)">Bueno</div>
+                    <div class="nivel-boton excelente" data-value="10" onclick="seleccionarNivel(this)">Excelente</div>
+                </td>
+                <td>
+                    <div class="nivel-boton regular" data-value="6" onclick="seleccionarNivel(this)">Regular</div>
+                    <div class="nivel-boton bueno" data-value="8" onclick="seleccionarNivel(this)">Bueno</div>
+                    <div class="nivel-boton excelente" data-value="10" onclick="seleccionarNivel(this)">Excelente</div>
+                </td>
+                <td>
+                    <div class="nivel-boton regular" data-value="6" onclick="seleccionarNivel(this)">Regular</div>
+                    <div class="nivel-boton bueno" data-value="8" onclick="seleccionarNivel(this)">Bueno</div>
+                    <div class="nivel-boton excelente" data-value="10" onclick="seleccionarNivel(this)">Excelente</div>
+                </td>
+                <td>
+                    <div class="nivel-boton regular" data-value="6" onclick="seleccionarNivel(this)">Regular</div>
+                    <div class="nivel-boton bueno" data-value="8" onclick="seleccionarNivel(this)">Bueno</div>
+                    <div class="nivel-boton excelente" data-value="10" onclick="seleccionarNivel(this)">Excelente</div>
+                </td>
+                <td><span class="calificacion">0</span></td>
+            </tr>
+
+            <!-- Proyecto 2: Estructura Puente -->
+            <tr>
+                <td>Estructura Puente</td>
+                <td>
+                    <label class="switch">
+                        <input type="checkbox" checked onchange="calcularCalificaciones()">
+                        <span class="slider"></span>
+                    </label>
+                </td>
+                <td>
+                    <div class="nivel-boton regular" data-value="6" onclick="seleccionarNivel(this)">Regular</div>
+                    <div class="nivel-boton bueno" data-value="8" onclick="seleccionarNivel(this)">Bueno</div>
+                    <div class="nivel-boton excelente" data-value="10" onclick="seleccionarNivel(this)">Excelente</div>
+                </td>
+                <td>
+                    <div class="nivel-boton regular" data-value="6" onclick="seleccionarNivel(this)">Regular</div>
+                    <div class="nivel-boton bueno" data-value="8" onclick="seleccionarNivel(this)">Bueno</div>
+                    <div class="nivel-boton excelente" data-value="10" onclick="seleccionarNivel(this)">Excelente</div>
+                </td>
+                <td>
+                    <div class="nivel-boton regular" data-value="6" onclick="seleccionarNivel(this)">Regular</div>
+                    <div class="nivel-boton bueno" data-value="8" onclick="seleccionarNivel(this)">Bueno</div>
+                    <div class="nivel-boton excelente" data-value="10" onclick="seleccionarNivel(this)">Excelente</div>
+                </td>
+                <td>
+                    <div class="nivel-boton regular" data-value="6" onclick="seleccionarNivel(this)">Regular</div>
+                    <div class="nivel-boton bueno" data-value="8" onclick="seleccionarNivel(this)">Bueno</div>
+                    <div class="nivel-boton excelente" data-value="10" onclick="seleccionarNivel(this)">Excelente</div>
+                </td>
+                <td>
+                    <div class="nivel-boton regular" data-value="6" onclick="seleccionarNivel(this)">Regular</div>
+                    <div class="nivel-boton bueno" data-value="8" onclick="seleccionarNivel(this)">Bueno</div>
+                    <div class="nivel-boton excelente" data-value="10" onclick="seleccionarNivel(this)">Excelente</div>
+                </td>
+                <td>
+                    <div class="nivel-boton regular" data-value="6" onclick="seleccionarNivel(this)">Regular</div>
+                    <div class="nivel-boton bueno" data-value="8" onclick="seleccionarNivel(this)">Bueno</div>
+                    <div class="nivel-boton excelente" data-value="10" onclick="seleccionarNivel(this)">Excelente</div>
+                </td>
+                <td>
+                    <div class="nivel-boton regular" data-value="6" onclick="seleccionarNivel(this)">Regular</div>
+                    <div class="nivel-boton bueno" data-value="8" onclick="seleccionarNivel(this)">Bueno</div>
+                    <div class="nivel-boton excelente" data-value="10" onclick="seleccionarNivel(this)">Excelente</div>
+                </td>
+                <td>
+                    <div class="nivel-boton regular" data-value="6" onclick="seleccionarNivel(this)">Regular</div>
+                    <div class="nivel-boton bueno" data-value="8" onclick="seleccionarNivel(this)">Bueno</div>
+                    <div class="nivel-boton excelente" data-value="10" onclick="seleccionarNivel(this)">Excelente</div>
+                </td>
+                <td>
+                    <div class="nivel-boton regular" data-value="6" onclick="seleccionarNivel(this)">Regular</div>
+                    <div class="nivel-boton bueno" data-value="8" onclick="seleccionarNivel(this)">Bueno</div>
+                    <div class="nivel-boton excelente" data-value="10" onclick="seleccionarNivel(this)">Excelente</div>
+                </td>
+                <td><span class="calificacion">0</span></td>
+            </tr>
+
+            <!-- Proyecto 3: Tipos de Enlace -->
+            <tr>
+                <td>Tipos de Enlace</td>
+                <td>
+                    <label class="switch">
+                        <input type="checkbox" checked onchange="calcularCalificaciones()">
+                        <span class="slider"></span>
+                    </label>
+                </td>
+                <td>
+                    <div class="nivel-boton regular" data-value="6" onclick="seleccionarNivel(this)">Regular</div>
+                    <div class="nivel-boton bueno" data-value="8" onclick="seleccionarNivel(this)">Bueno</div>
+                    <div class="nivel-boton excelente" data-value="10" onclick="seleccionarNivel(this)">Excelente</div>
+                </td>
+                <td>
+                    <div class="nivel-boton regular" data-value="6" onclick="seleccionarNivel(this)">Regular</div>
+                    <div class="nivel-boton bueno" data-value="8" onclick="seleccionarNivel(this)">Bueno</div>
+                    <div class="nivel-boton excelente" data-value="10" onclick="seleccionarNivel(this)">Excelente</div>
+                </td>
+                <td>
+                    <div class="nivel-boton regular" data-value="6" onclick="seleccionarNivel(this)">Regular</div>
+                    <div class="nivel-boton bueno" data-value="8" onclick="seleccionarNivel(this)">Bueno</div>
+                    <div class="nivel-boton excelente" data-value="10" onclick="seleccionarNivel(this)">Excelente</div>
+                </td>
+                <td>
+                    <div class="nivel-boton regular" data-value="6" onclick="seleccionarNivel(this)">Regular</div>
+                    <div class="nivel-boton bueno" data-value="8" onclick="seleccionarNivel(this)">Bueno</div>
+                    <div class="nivel-boton excelente" data-value="10" onclick="seleccionarNivel(this)">Excelente</div>
+                </td>
+                <td>
+                    <div class="nivel-boton regular" data-value="6" onclick="seleccionarNivel(this)">Regular</div>
+                    <div class="nivel-boton bueno" data-value="8" onclick="seleccionarNivel(this)">Bueno</div>
+                    <div class="nivel-boton excelente" data-value="10" onclick="seleccionarNivel(this)">Excelente</div>
+                </td>
+                <td>
+                    <div class="nivel-boton regular" data-value="6" onclick="seleccionarNivel(this)">Regular</div>
+                    <div class="nivel-boton bueno" data-value="8" onclick="seleccionarNivel(this)">Bueno</div>
+                    <div class="nivel-boton excelente" data-value="10" onclick="seleccionarNivel(this)">Excelente</div>
+                </td>
+                <td>
+                    <div class="nivel-boton regular" data-value="6" onclick="seleccionarNivel(this)">Regular</div>
+                    <div class="nivel-boton bueno" data-value="8" onclick="seleccionarNivel(this)">Bueno</div>
+                    <div class="nivel-boton excelente" data-value="10" onclick="seleccionarNivel(this)">Excelente</div>
+                </td>
+                <td>
+                    <div class="nivel-boton regular" data-value="6" onclick="seleccionarNivel(this)">Regular</div>
+                    <div class="nivel-boton bueno" data-value="8" onclick="seleccionarNivel(this)">Bueno</div>
+                    <div class="nivel-boton excelente" data-value="10" onclick="seleccionarNivel(this)">Excelente</div>
+                </td>
+                <td>
+                    <div class="nivel-boton regular" data-value="6" onclick="seleccionarNivel(this)">Regular</div>
+                    <div class="nivel-boton bueno" data-value="8" onclick="seleccionarNivel(this)">Bueno</div>
+                    <div class="nivel-boton excelente" data-value="10" onclick="seleccionarNivel(this)">Excelente</div>
+                </td>
+                <td><span class="calificacion">0</span></td>
+            </tr>
+
+            <!-- Proyecto 4: Nutrición -->
+            <tr>
+                <td>Nutrición</td>
+                <td>
+                    <label class="switch">
+                        <input type="checkbox" checked onchange="calcularCalificaciones()">
+                        <span class="slider"></span>
+                    </label>
+                </td>
+                <td>
+                    <div class="nivel-boton regular" data-value="6" onclick="seleccionarNivel(this)">Regular</div>
+                    <div class="nivel-boton bueno" data-value="8" onclick="seleccionarNivel(this)">Bueno</div>
+                    <div class="nivel-boton excelente" data-value="10" onclick="seleccionarNivel(this)">Excelente</div>
+                </td>
+                <td>
+                    <div class="nivel-boton regular" data-value="6" onclick="seleccionarNivel(this)">Regular</div>
+                    <div class="nivel-boton bueno" data-value="8" onclick="seleccionarNivel(this)">Bueno</div>
+                    <div class="nivel-boton excelente" data-value="10" onclick="seleccionarNivel(this)">Excelente</div>
+                </td>
+                <td>
+                    <div class="nivel-boton regular" data-value="6" onclick="seleccionarNivel(this)">Regular</div>
+                    <div class="nivel-boton bueno" data-value="8" onclick="seleccionarNivel(this)">Bueno</div>
+                    <div class="nivel-boton excelente" data-value="10" onclick="seleccionarNivel(this)">Excelente</div>
+                </td>
+                <td>
+                    <div class="nivel-boton regular" data-value="6" onclick="seleccionarNivel(this)">Regular</div>
+                    <div class="nivel-boton bueno" data-value="8" onclick="seleccionarNivel(this)">Bueno</div>
+                    <div class="nivel-boton excelente" data-value="10" onclick="seleccionarNivel(this)">Excelente</div>
+                </td>
+                <td>
+                    <div class="nivel-boton regular" data-value="6" onclick="seleccionarNivel(this)">Regular</div>
+                    <div class="nivel-boton bueno" data-value="8" onclick="seleccionarNivel(this)">Bueno</div>
+                    <div class="nivel-boton excelente" data-value="10" onclick="seleccionarNivel(this)">Excelente</div>
+                </td>
+                <td>
+                    <div class="nivel-boton regular" data-value="6" onclick="seleccionarNivel(this)">Regular</div>
+                    <div class="nivel-boton bueno" data-value="8" onclick="seleccionarNivel(this)">Bueno</div>
+                    <div class="nivel-boton excelente" data-value="10" onclick="seleccionarNivel(this)">Excelente</div>
+                </td>
+                <td>
+                    <div class="nivel-boton regular" data-value="6" onclick="seleccionarNivel(this)">Regular</div>
+                    <div class="nivel-boton bueno" data-value="8" onclick="seleccionarNivel(this)">Bueno</div>
+                    <div class="nivel-boton excelente" data-value="10" onclick="seleccionarNivel(this)">Excelente</div>
+                </td>
+                <td>
+                    <div class="nivel-boton regular" data-value="6" onclick="seleccionarNivel(this)">Regular</div>
+                    <div class="nivel-boton bueno" data-value="8" onclick="seleccionarNivel(this)">Bueno</div>
+                    <div class="nivel-boton excelente" data-value="10" onclick="seleccionarNivel(this)">Excelente</div>
+                </td>
+                <td>
+                    <div class="nivel-boton regular" data-value="6" onclick="seleccionarNivel(this)">Regular</div>
+                    <div class="nivel-boton bueno" data-value="8" onclick="seleccionarNivel(this)">Bueno</div>
+                    <div class="nivel-boton excelente" data-value="10" onclick="seleccionarNivel(this)">Excelente</div>
+                </td>
+                <td><span class="calificacion">0</span></td>
+            </tr>
+
+            <!-- Fila para el promedio de la materia -->
+            <tr class="promedio-materia">
+                <td colspan="12">Promedio de la materia Química</td>
+                <td><span id="promedio-stem">0</span></td>
+            </tr>
+        </tbody>
+    </table>
+</form>
+
+<!-- Enlace al archivo JavaScript externo -->
+<script src="script.js"></script>
+
+</body>
+</html>
